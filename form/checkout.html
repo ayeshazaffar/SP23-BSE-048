@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout Form</title>
+    <style>
+        /* Basic reset for the body */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+    
+        /* Checkout button in the top-left */
+        #checkoutButton {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            padding: 10px;
+            background: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    
+        /* Centered form */
+        #checkoutForm {
+            display: none;
+            width: 300px;
+            margin: 100px auto;
+            padding: 20px;
+            background: white;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            text-align: center;
+        }
+    
+        /* Input and button styles */
+        input, textarea {
+            width: 90%;
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+    
+        /* Error highlighting */
+        .error {
+            border-color: red;
+        }
+    
+        /* Error message */
+        .error-message {
+            color: red;
+            font-size: 12px;
+            display: none;
+        }
+    </style>
+    
+</head>
+<body>
+
+    <!-- Checkout button at the top-left corner -->
+    <button id="checkoutButton" onclick="showForm()">Checkout</button>
+
+    <!-- The checkout form centered on the page -->
+    <form id="checkoutForm" onsubmit="validateForm(event)">
+        <input type="text" id="name" name="name" placeholder="Enter your name">
+        <span id="nameError" class="error-message">Name is required</span>
+
+        <input type="email" id="email" name="email" placeholder="Enter your email">
+        <span id="emailError" class="error-message">Email is required</span>
+
+        <textarea id="message" name="message" placeholder="Enter your message"></textarea>
+        <span id="messageError" class="error-message">Message is required</span>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <script>
+        // Function to show the form when the Checkout button is clicked
+        function showForm() {
+            document.getElementById('checkoutForm').style.display = 'block';
+        }
+
+        // Function to validate the form on submission
+        function validateForm(event) {
+            event.preventDefault(); // Stop form from submitting
+            let isValid = true; // Assume form is valid
+
+            // Get form elements
+            let name = document.getElementById("name");
+            let email = document.getElementById("email");
+            let message = document.getElementById("message");
+
+            // Get error messages
+            let nameError = document.getElementById("nameError");
+            let emailError = document.getElementById("emailError");
+            let messageError = document.getElementById("messageError");
+
+            // Reset error styles
+            name.classList.remove("error");
+            email.classList.remove("error");
+            message.classList.remove("error");
+            nameError.style.display = "none";
+            emailError.style.display = "none";
+            messageError.style.display = "none";
+
+            // Check if fields are filled
+            if (!name.value) {
+                name.classList.add("error");
+                nameError.style.display = "block";
+                isValid = false;
+            }
+            if (!email.value) {
+                email.classList.add("error");
+                emailError.style.display = "block";
+                isValid = false;
+            }
+            if (!message.value) {
+                message.classList.add("error");
+                messageError.style.display = "block";
+                isValid = false;
+            }
+
+            // If form is valid, log success message
+            if (isValid) {
+                console.log("Form is valid and ready for submission.");
+            }
+        }
+    </script>
+
+</body>
+</html>

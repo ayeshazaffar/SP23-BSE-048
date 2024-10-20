@@ -1,0 +1,36 @@
+@keyframes mymove {
+    from {left:-250px;}
+    to {left: 255px;}
+}
+
+.logo {
+    width: 295px;
+    height: 75px;
+}
+
+.subheading {
+    font-size: 16px;
+    color: #555;
+}
+
+.nav-link.active, .nav-link:hover {
+    background-color: #044c1c;
+    color: white;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    color: green;
+}
+
+.card-text small {
+    color: green;
+}
+
+.footer-content p, .footer-content a {
+    color: #4a8429;
+}
+
+.footer-content h4 {
+    font-size: 1.25rem;
+}

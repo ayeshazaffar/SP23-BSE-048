@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume - Ayesha Zaffar</title>
+    <link rel="stylesheet" href="mid.css">
+    <style>
+        
+        .container {
+            width: 60%; 
+            max-width: 800px; 
+            margin: 0 auto; 
+            padding: 20px; 
+        }
+
+        .intro-box {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            font-size: 1.2em;
+            display: none; /* Hidden by default */
+            z-index: 1000; 
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .profile-pic {
+            width: 150px; /* Adjust image size */
+            height: auto;
+        
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+
+        p {
+            font-size: 1.1em;
+        }
+
+        .summary, .skills, .work-history, .education, .certifications, .languages {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="left-section">
+                <h1>Ayesha Zaffar</h1>
+                <br>
+                <p>Address: Lahore, xyz Pakistan</p>
+                <p>Phone: 1234567890</p>
+                <p>Email: ayeshazaffargit@gmail.com</p>
+            </div>
+            <div class="right-section">
+                <img src="me.jpeg" alt="Ayesha Zaffar" class="profile-pic" onmouseover="showIntro()" onmouseout="hideIntro()">
+            </div>
+        </div>
+
+        <!-- Introduction Box that will be shown on hover -->
+        <div class="intro-box" id="intro-box">
+            <p><strong>Name:</strong> Ayesha Zaffar</p>
+            <p><strong>Address:</strong> Lahore, xyz Pakistan</p>
+            <p><strong>Phone:</strong> 1234567890</p>
+            <p><strong>Email:</strong> ayeshazaffargit@gmail.com</p>
+        </div>
+
+        <div class="summary">
+            <p>As a Software Engineer at COMSATS University, I leveraged my expertise in Javascript, SQL, and Python to drive significant improvements in project outcomes, demonstrating a strong blend of technical proficiency and problem-solving skills. My approach, emphasizing object-oriented programming, resulted in a 20% efficiency increase in our development processes.</p>
+        </div>
+        
+        <div class="skills">
+            <h2>Skills</h2>
+            <ul>
+                <li>Javascript</li>
+                <li>SQL</li>
+                <li>Object-Oriented Programming</li>
+                <li>Python</li>
+            </ul>
+        </div>
+
+        <div class="work-history">
+            <h2>Work History</h2>
+            <p><strong>Software Engineer</strong></p>
+            <p>COMSATS University, Lahore</p>
+            <p>2023-01 - 2024-02</p>
+        </div>
+
+        <div class="education">
+            <h2>Education</h2>
+            <p><strong>Intermediate: Medical Science</strong></p>
+            <p>Punjab College Dha Campus - Muzaffargarh</p>
+            <p>2020-01</p>
+            
+            <p><strong>Bachelor of Science: Software Engineer</strong></p>
+            <p>COMSATS University, Lahore</p>
+            <p>Expected in 2027-01</p>
+        </div>
+
+        <div class="certifications">
+            <h2>Certifications</h2>
+            <ul>
+                <li>First Aid Certification</li>
+                <li>[State] Driver’s License</li>
+                <li>Basic Life Support Certification (BLS)</li>
+                <li>Project Management Professional (PMP)</li>
+            </ul>
+        </div>
+
+        <div class="languages">
+            <h2>Languages</h2>
+            <p><strong>Urdu:</strong> Native language</p>
+            <p><strong>English:</strong> Advanced (C1)</p>
+        </div>
+    </div>
+
+    <script src="mid.js"></script>
+</body>
+</html>
+

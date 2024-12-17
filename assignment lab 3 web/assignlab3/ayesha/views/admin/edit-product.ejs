@@ -1,0 +1,39 @@
+<h1>Edit Product</h1>
+
+<form action="/products/edit/<%= product._id %>" method="POST">
+  <!-- Brand Name -->
+  <div>
+    <label for="brandname">Brand Name:</label>
+    <input 
+      type="text" 
+      id="brandname" 
+      name="brandname" 
+      value="<%= product.brandname %>" 
+      required>
+  </div>
+
+  <!-- Description -->
+  <div>
+    <label for="description">Description:</label>
+    <textarea 
+      id="description" 
+      name="description" 
+      rows="4" 
+      required><%= product.description %></textarea>
+  </div>
+
+  <!-- Picture -->
+  <div>
+    <label for="picture">Picture URL:</label>
+    <input 
+      type="text" 
+      id="picture" 
+      name="picture" 
+      value="<%= product.picture %>">
+  </div>
+
+  <!-- Submit Button -->
+  <div>
+    <button type="submit">Save Changes</button>
+  </div>
+</form>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="/css/layout.css">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"> -->
+</head>
+<body>
+    <!--  <ul id="menu">
+        <li><a href="/home">Home</a></li>
+        <li><a href="/contact">Contact Us</a></li>
+          </ul>  
+
+    <h1>Welcome to the Home Page!</h1>     -->
+
+    <div class ="outer">
+        <!-- Header with logo and headline -->
+        
+        <header>
+            <div class="headline" >
+                <div class="icon">
+                    <span class="title">headline</span>
+                </div>
+                <p style=" animation: mymove 5s infinite;animation-delay: 0s;position: relative;animation-timing-function: linear;">DISCOVER PAKISTANI BRANDS WITH PAKISTANIBRANDS.PK</p>
+            
+        
+            </div>
+            <span class="searchbox-icon"></span>
+            <div class="logo-back"> 
+            <div style="padding-right: 70%;" class="logo-container"> 
+                <img src="/images/pakistani-2-1.png" alt="Pakistani Brands Logo" class="logo">
+            </div>
+            <p style="padding-right:69% ; font-size: smaller;" class="subheading">Discover Pakistani Brands With pakistanibrands.pk</p>
+            </div> 
+            <nav> 
+    
+          
+                <ul>
+                    <li style="background-color: #044c1c;padding: 30px;"><a href="#">Home</a></li>
+                    <li><a href="#">Top 10 Brands In Pakistan</a></li>
+                    <li><a href="#">Top 10 Products In Pakistan</a></li>
+                    <li><a href="#">About</a></li>
+                    <li style="background-color: #044c1c;padding: 30px;"><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <main >
+
+        <div id="products">
+            <% p.forEach(prod => { %>
+              <div class="products">
+               <b> <p style="font-size: large; color: #044c1c;"><%= prod.brandname %></p></b>
+                <img src="/<%=prod.picture %>" alt="<%= prod.description %> " width="240px">
+                
+                
+                <p style="width: 250px;"><%= prod.description %></p>
+                <a href="/categories" 
+   style="display: inline-block; background-color: green; color: white; text-decoration: none; padding: 10px 20px; border-radius: 5px; font-size: 16px; font-weight: bold; text-align: center;">
+   Read More
+</a>
+                        
+              </div>
+            <% }) %>
+
+        </div>
+        
+          </main>
+         
+          
+        
+        <!-- Footer Section -->
+        <footer>
+            <div class="footer-content">
+                <div class="about-me">
+                    <h4 style="font-weight: bolder;font-size:larger;">ABOUT ME</h4>
+                    <p style="font-size: small;box-sizing:40%;color: white;font: family 15px arimo;word-spacing:4px;">Abdussalam Chughtai
+                        <br>
+                        <br>
+                        Abdussalam is a web designer & digital marketer from Islamabad. From fashion and accessories to home decor and electronics, top Pakistani brands have embraced the digital landscape, bringing their distinct craftsmanship and unique designs to customers around the globe.
+                        <br>
+                        <br>
+                        With just a few clicks, you can explore an array of exquisite products, indulge in the rich heritage of Pakistani craftsmanship, and support local businesses all from the comfort of your own home.</p>
+                </div>
+                <div class="recent-posts">
+                    <h4 style="font-weight: bolder;font-size:larger;">RECENT POSTS</h4>
+                        <a href="#">
+                            <br>
+                            <br> > 
+                            Best Food and Beverage Brands in Pakistan 2024   <br>..................................................</a>
+                    
+                </div>
+                <div class="get-in-touch">
+                    <h4 style="font-weight: boldER;font-size:larger;">GET IN TOUCH</h4>
+                    <br>
+                    <br>
+                    <a href="#"><img src="/images/fbb.jpg" alt="Facebook"></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p style="text-align: left;top: 10px;"> © 2024 <a href="https://pakistanibrands.pk/">pakistanibrands.pk</a>. All Rights Reserved</p>
+                </p>
+                <p style="text-align: right;bottom: 17px;">Design by Abdusalam Chugthai</p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
